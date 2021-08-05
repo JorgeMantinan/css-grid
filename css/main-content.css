@@ -1,0 +1,11 @@
+.main-content {
+  grid-area: main-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "projects  projects  projects  projects" "courses   courses   courses   courses";
+}
+/*# sourceMappingURL=main-content.css.map */

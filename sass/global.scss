@@ -1,0 +1,55 @@
+@import "../sass/header.scss";
+@import "../sass/main-content.scss";
+
+$background-color: #000000;
+
+/* Palette */
+$primary-color: #000000;
+$secondary-color: #DB0700;
+$third-color: #968D8D;
+$fourth-color: #C2B6B6;
+$fifth-color: #FFF0F0;
+
+$text: #FFF0F0;
+$font-family: 'Montserrat', sans-serif;
+$font-size: 16px;
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background: $background-color;
+    font-size: $font-size;
+    font-family: $font-family;
+    color: $text;
+}
+
+.main-grid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh repeat(2, auto);
+    /* grid-template-areas:"header         header         header         header         header"
+                        "main-content   main-content   main-content   main-content   main-content"
+                        "footer         footer         footer         footer         footer"; */
+    grid-template-areas:"header"
+                        "main-content"
+                        "footer";
+}
+
+
+/* Scroll Bar */
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: $background-color;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+  background-color: $secondary-color;
+}

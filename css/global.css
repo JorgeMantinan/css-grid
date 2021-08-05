@@ -1,0 +1,108 @@
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+}
+
+.links a:hover {
+  -webkit-text-decoration-style: wavy;
+          text-decoration-style: wavy;
+}
+
+.header-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 1fr 100px;
+      grid-template-areas: "menu       " "main-header" "end-header ";
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menu;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.main-content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main-content;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "projects  projects  projects  projects" "courses   courses   courses   courses";
+}
+
+/* Palette */
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background: #000000;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #FFF0F0;
+}
+
+.main-grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100vh (auto)[2];
+      grid-template-rows: 100vh repeat(2, auto);
+  /* grid-template-areas:"header         header         header         header         header"
+                        "main-content   main-content   main-content   main-content   main-content"
+                        "footer         footer         footer         footer         footer"; */
+      grid-template-areas: "header" "main-content" "footer";
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+  background-color: #DB0700;
+}
+/*# sourceMappingURL=global.css.map */

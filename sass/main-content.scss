@@ -1,0 +1,8 @@
+.main-content{
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:"projects  projects  projects  projects"
+                        "courses   courses   courses   courses";
+}
