@@ -55,6 +55,31 @@
   height: 100px;
 }
 
+.end-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.end-header .go-projects-label {
+  text-align: center;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.end-header .cookies-text {
+  margin: 2em;
+  text-align: right;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: -1;
+}
+
 .main-content {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
