@@ -4,6 +4,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url(d:\css-grid\css\global.css);
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -7471,9 +7472,8 @@ fieldset:disabled .btn {
   border-color: #0d6efd !important;
 }
 
-/* CHANGE COLOR TO $THIRD-COLOR global.scss */
 .border-secondary {
-  border-color: #968D8D !important;
+  border-color: #6c757d !important;
 }
 
 .border-success {
@@ -11499,7 +11499,12 @@ fieldset:disabled .btn {
   }
 }
 
+/* Palette */
 .link-primary {
-  color: #ffffff;
+  color: #FFF0F0;
+}
+
+.link-primary:hover, .link-primary:focus {
+  color: #DB0700;
 }
 /*# sourceMappingURL=styles.css.map */

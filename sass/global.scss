@@ -40,6 +40,29 @@ body{
 }
 
 
+/* Button of information */
+/* TODO Modify btn-outline-info of boostrap 5 */
+.but-info, .but-info:visited {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  color: $text;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid $secondary-color;
+  border-radius: 0.25rem;
+  line-height: 1.5;
+  font-family: 'Montserrat', inherit;
+  font-weight: 300;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.but-info:hover , .but-info:active, .but-info:focus{
+  color: $secondary-color;
+  border: 1px solid $fifth-color;
+}
+
 /* Scroll Bar */
 ::-webkit-scrollbar
 {
