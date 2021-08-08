@@ -98,6 +98,7 @@ ul.show {
       -ms-grid-row-align: center;
       align-self: center;
   text-align: left;
+  z-index: 4;
 }
 
 .main-header .personal-information h1 {
@@ -119,13 +120,13 @@ ul.show {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  z-index: -1;
+  z-index: 3;
 }
 
 .main-header .logo-m img {
   width: 100%;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
 }
 
 .main-header .rrss {
@@ -226,9 +227,6 @@ ul.show {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .menu_links::before {
-    background-color: rgba(0, 0, 0, 0.6);
   }
   .menu_links li {
     margin: 30px 0 0 0;
