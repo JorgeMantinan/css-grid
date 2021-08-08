@@ -168,7 +168,7 @@ ul.show {
         align-self: center;
         justify-self: flex-end;
         margin-right: 50px;
-        z-index: 2;
+        z-index: 6;
     }
     .menu_links {
         position: fixed;
@@ -187,6 +187,7 @@ ul.show {
                 background: none;
             }
         }
+        z-index: 5;
     }
-
+    
 }
