@@ -1,5 +1,7 @@
 /* Grid Header */
 .header-container {
+  background-image: url("../img/HexaBackgroundHeader.jpg");
+  background-size: cover;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;

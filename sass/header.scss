@@ -8,6 +8,9 @@ $text: #FFF0F0;
 /* Grid Header */
 
 .header-container {
+    background-image: url("../img/HexaBackgroundHeader.jpg");
+    background-size: cover;
+
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr;
