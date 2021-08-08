@@ -50,6 +50,11 @@ ul.show {
     display: none;
     cursor: pointer;
     font-size: 1.25em;
+    &:hover, &:focus, &:active{
+        color: transparent;
+        -webkit-text-stroke: 1px $text;
+        transition: .5s;
+    }
 }
 
 .logo {
@@ -104,7 +109,8 @@ ul.show {
             color: $third-color;
             text-decoration: none;
             &:hover, &:focus, &:active{
-                color: $secondary-color;
+                color: transparent;
+                -webkit-text-stroke: 1px $text;
                 transition: .5s;
             }
         }        
@@ -167,7 +173,8 @@ ul.show {
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background: $secondary-color;
+        background-image: url("../img/BackgroundMenuResponsive.jpg");
+        background-size: cover;
         top: -100vh;
         text-align: center;
         transition: all .5s;
@@ -177,14 +184,6 @@ ul.show {
             line-height: 30px;
             &:hover {
                 background: none;
-            }
-            a {
-                font-size: 16px;
-                &:hover, &:focus, &:active {
-                    color: $text;
-                    font-size: 20px;
-                    font-weight: 700;
-                } 
             }
         }
     }

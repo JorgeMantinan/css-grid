@@ -14,8 +14,10 @@ $font-size: 16px;
 
 .link-primary {
     color: $text;
+    font-weight: 300;
     &:hover, &:focus, &:active{
-        color: $secondary-color;
+        color: $text;
+        font-weight: 500;
         transition: .5s;
     }
 }
