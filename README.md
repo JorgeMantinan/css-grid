@@ -6,3 +6,4 @@ Project for learning about CSS GRID creating a Wordpress Template.
 - Developer Mozilla => https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout
 - Css Tricks => https://css-tricks.com/snippets/css/complete-guide-grid/
 - Download Boostrap 5.0 => https://www.youtube.com/watch?v=rIEoF6B_GNY (part 3 for modify boostrap variables
+- Responsive Menu => https://www.youtube.com/watch?v=vFgtwsZVybY&t=1627s

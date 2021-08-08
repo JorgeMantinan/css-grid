@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;800&display=swap"
         rel="stylesheet">
 
+    <script src="./js/navbar.js"></script>
+
     <title>Manti CSS GRID</title>
 </head>
 
@@ -27,14 +29,17 @@
         <header class="header-container"> <!-- container? -->
             <nav class="menu">
                 <div class="logo"><img src="./img/MantiLogoWhite.png" alt="Manti-Logo" class="img-fluid"></div>
-                <div class="links">
-                    <a href="#" class="link-primary">PORTAFOLIO</a>
-                    <a href="#" class="link-primary">CURSOS</a>
-                    <a href="#" class="link-primary">CONTACTO</a>
-                    <a href="#" class="link-primary">CC</a>
-                </div>
+                <ul class="menu_links">
+                    <li><a href="#" class="link-primary">PORTAFOLIO</a></li>
+                    <li><a href="#" class="link-primary">CURSOS</a></li>
+                    <li><a href="#" class="link-primary">CONTACTO</a></li>
+                    <li><a href="#" class="link-primary">CC</a></li>
+                </ul>
+                <span class="btn_menu">
+                    <i class="fas fa-bars"></i>
+                </span>
             </nav>
-            
+
             <div class="main-header">
                 <div class="personal-information">
                     <h1>Jorge Mantiñán</h1>
