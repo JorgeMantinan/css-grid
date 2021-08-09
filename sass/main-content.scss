@@ -1,15 +1,14 @@
-
 /* Palette */
 $primary-color: #000000;
-$secondary-color: #DB0700;
-$third-color: #968D8D;
-$fourth-color: #C2B6B6;
-$fifth-color: #FFF0F0;
+$secondary-color: #db0700;
+$third-color: #968d8d;
+$fourth-color: #c2b6b6;
+$fifth-color: #fff0f0;
 
-$font-family: 'Montserrat', sans-serif;
+$font-family: "Montserrat", sans-serif;
 $font-size: 16px;
 
-.main-content{
+.main-content {
     padding: 50px 0px;
     //background-color: $fifth-color;
     background-image: url("../img/WhiteGeometry.png");
@@ -17,8 +16,47 @@ $font-size: 16px;
     color: $primary-color;
     grid-area: main-content;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
-    grid-template-areas:"projects  projects  projects  projects"
-                        "courses   courses   courses   courses";
+    grid-template-areas:
+        "projects"
+        "courses";
+    align-content: space-between;
+}
+
+.projects {
+    display: grid;
+    grid-area: projects;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    justify-self: center;
+}
+
+.project {
+    width: 500px;
+    border: 2px solid $primary-color;
+    grid-column: span 2;
+    &:nth-child(odd) {
+        justify-items: end;
+        margin-right: 20px;
+    }
+    &:nth-child(even) {
+        justify-items: start;
+        margin-left: 20px;
+    }
+}
+
+.technologies {
+    width: 260px;
+    margin: auto;
+    text-align: center;
+    border: 2px solid $primary-color;
+    grid-column: span 1;
+    &:nth-child(odd) {
+        justify-items: start;
+    }
+    &:nth-child(even) {
+        justify-items: end;
+    }
 }

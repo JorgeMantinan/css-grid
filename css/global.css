@@ -257,9 +257,58 @@ ul.show {
   grid-area: main-content;
   display: -ms-grid;
   display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       grid-template-rows: repeat(2, auto);
-      grid-template-areas: "projects  projects  projects  projects" "courses   courses   courses   courses";
+      grid-template-areas: "projects" "courses";
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: projects;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.project {
+  width: 500px;
+  border: 2px solid #000000;
+  grid-column: span 2;
+}
+
+.project:nth-child(odd) {
+  justify-items: end;
+  margin-right: 20px;
+}
+
+.project:nth-child(even) {
+  justify-items: start;
+  margin-left: 20px;
+}
+
+.technologies {
+  width: 260px;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #000000;
+  grid-column: span 1;
+}
+
+.technologies:nth-child(odd) {
+  justify-items: start;
+}
+
+.technologies:nth-child(even) {
+  justify-items: end;
 }
 
 /* Palette */
