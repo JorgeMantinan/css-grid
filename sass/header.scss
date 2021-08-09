@@ -79,12 +79,14 @@ ul.show {
         align-self: center;
         text-align: left;
         h1 {
-            font-size: 4em;
+            font-size: calc(18px + 2.5vw);
+            
             font-weight: 600;
             line-height: 1.125;
         }
         h3{
             margin-bottom: .5em;
+            font-size: calc(12px + 1.5vw);
             font-weight: 300;
             line-height: 1.125;
         }
@@ -105,7 +107,7 @@ ul.show {
         float: block;
         margin: 1em;
         text-align: right;
-        font-size: 3em;
+        font-size: calc(18px + 2.5vw);
         a{
             color: $third-color;
             text-decoration: none;
@@ -147,8 +149,8 @@ ul.show {
     }
 }
 
-
-@media screen and (max-width: 858px){
+/* Small Screen */
+@media screen and (max-width: 768px){
 
     /* Navbar Logo */
     .logo {
@@ -189,5 +191,12 @@ ul.show {
         }
         z-index: 5;
     }
-    
+}
+
+@media screen and (max-width: 600px) {
+
+    .personal-information{
+        margin-left: 10%;
+    }
+
 }
