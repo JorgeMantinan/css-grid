@@ -1,4 +1,9 @@
+/* Palette */
 .main-content {
+  padding: 50px 0px;
+  background-image: url("../img/WhiteGeometry.png");
+  background-repeat: repeat;
+  color: #000000;
   grid-area: main-content;
   display: -ms-grid;
   display: grid;

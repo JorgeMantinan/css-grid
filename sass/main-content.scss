@@ -1,4 +1,20 @@
+
+/* Palette */
+$primary-color: #000000;
+$secondary-color: #DB0700;
+$third-color: #968D8D;
+$fourth-color: #C2B6B6;
+$fifth-color: #FFF0F0;
+
+$font-family: 'Montserrat', sans-serif;
+$font-size: 16px;
+
 .main-content{
+    padding: 50px 0px;
+    //background-color: $fifth-color;
+    background-image: url("../img/WhiteGeometry.png");
+    background-repeat: repeat;
+    color: $primary-color;
     grid-area: main-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

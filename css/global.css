@@ -246,7 +246,12 @@ ul.show {
   }
 }
 
+/* Palette */
 .main-content {
+  padding: 50px 0px;
+  background-image: url("../img/WhiteGeometry.png");
+  background-repeat: repeat;
+  color: #000000;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main-content;
