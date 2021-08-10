@@ -7,13 +7,13 @@ $fifth-color: #fff0f0;
 
 $font-family: "Montserrat", sans-serif;
 $font-size: 16px;
+$text: #fff0f0;
 
 .main-content {
-    padding: 50px 0px;
+    padding: 100px 0px;
     //background-color: $fifth-color;
     background-image: url("../img/WhiteGeometry.png");
     background-repeat: repeat;
-    color: $primary-color;
     grid-area: main-content;
     display: grid;
     grid-template-columns: 1fr;
@@ -29,34 +29,120 @@ $font-size: 16px;
     grid-area: projects;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 20px;
+    row-gap: 200px;
     justify-self: center;
 }
 
 .project {
-    width: 500px;
-    border: 2px solid $primary-color;
+    width: 800px;
+    height: 410px;
     grid-column: span 2;
+    z-index: 3;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 800px;
+        height: 410px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        filter: brightness(60%);
+        z-index: -1;
+    }
     &:nth-child(odd) {
         justify-items: end;
-        margin-right: 20px;
     }
     &:nth-child(even) {
         justify-items: start;
-        margin-left: 20px;
+    }
+    &:nth-child(1) {
+        &:before {
+            background-image: url("../img/CasaModerna.jpg");
+        }
+    }
+    &:nth-child(4) {
+        &:before {
+            background-image: url("../img/CasaModerna2.jpg");
+        }
+    }
+    &:nth-child(5) {
+        &:before {
+            background-image: url("../img/LogoMantiWhiteBackBlack.png");
+        }
+    }
+    &:nth-child(8) {
+        &:before {
+            background-image: url("../img/EquipoEmpresarial.jpg");
+        }
+    }
+    &:hover,
+    &:focus {
+        &:before {
+            filter: brightness(30%);
+            transition: 0.8s;
+        }
+    }
+    .project-content {
+        padding: 20px 20px;
+        h1 {
+            font-size: calc(18px + 2.5vw);
+            font-weight: 600;
+            line-height: 1.125;
+        }
+        h3 {
+            margin-bottom: 0.5em;
+            font-size: calc(12px + 1.5vw);
+            font-weight: 300;
+            line-height: 1.125;
+        }
     }
 }
 
 .technologies {
-    width: 260px;
+    width: 250px;
+    height: 250px;
     margin: auto;
-    text-align: center;
-    border: 2px solid $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    clip-path: circle(50% at 50% 50%);
     grid-column: span 1;
     &:nth-child(odd) {
         justify-items: start;
     }
     &:nth-child(even) {
         justify-items: end;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        width: 250px;
+        height: 250px;
+        background-image: url("../img/CodigoProgramacion.jpg");
+        background-size: cover;
+        filter: brightness(70%);
+        z-index: -1;
+    }
+    &:hover,
+    &:focus {
+        clip-path: circle(70% at 50% 50%);
+        transition: 1.2s;
+        ul {
+            display: block;
+        }
+        &:before {
+            filter: brightness(30%);
+            transition: 1.2s;
+        }
+    }
+
+    ul {
+        display: none;
+        font-size: calc(6px + 1.2vh);
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
     }
 }
