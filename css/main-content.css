@@ -179,8 +179,8 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: courses;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
   /* 6 without extra courses */
@@ -207,14 +207,53 @@
 .title-courses {
   margin-top: 150px;
   width: 100%;
-  grid-column: span 2;
+  text-align: center;
+  color: #000000;
+}
+
+.study-center {
+  margin-top: 150px;
+  width: 100%;
+  height: 100hv;
   text-align: center;
   -ms-grid-column-align: center;
       justify-self: center;
   z-index: 1000;
 }
 
-.title-courses:nth-child(1) {
-  color: #000000;
+.course-technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #db0700;
+  border-radius: 2.5rem;
+  width: 500px;
+  height: 50px;
+  -webkit-box-shadow: inset 0 0 10px 0 black;
+          box-shadow: inset 0 0 10px 0 black;
+}
+
+.study-center {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  row-gap: 50px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.study-center h3 {
+  grid-column: span 2;
 }
 /*# sourceMappingURL=main-content.css.map */
