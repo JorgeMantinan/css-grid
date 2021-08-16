@@ -33,7 +33,6 @@ body{
 
 .main-grid{
     display: grid;
-    gap: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: 100vh repeat(2, auto);
     /* grid-template-areas:"header         header         header         header         header"

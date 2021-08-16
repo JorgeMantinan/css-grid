@@ -157,52 +157,52 @@ $text: #fff0f0;
 /* Courses */
 
 .courses {
-    &:before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: calc(100vh - var(--height-footer) - 10vh);
-        margin-top: 10vh;
-        background-image: url('../img/WhiteGeometry.png');
-        background-repeat: repeat;
-        filter: invert(95%);
-        clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
-    }
     width: 100%;
-    height: calc(100vh - var(--height-footer));
-    background-image: url('../img/WhiteGeometry.png');
-    background-repeat: repeat;
-    height: calc(100vh - var(--height-footer));
+    margin-top: 10vh;
     display: grid;
     grid-area: courses;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 1fr auto;
     justify-self: center;
 }
 
 .title-courses {
-    margin-top: 150px;
+    padding-top: 5hv;
     width: 100%;
-    text-align: center;
-    color: $primary-color;
+    height: 300px;
+    background-image: url("../img/BlackGeometry.png");
+    background-repeat: repeat;
+    clip-path: polygon(0 0, 100% 80%, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.study-center {
-    position: relative;
+.study-centers {
+    padding-top: 150px;
     width: 100%;
+    background-image: url("../img/BlackGeometry.png");
+    background-repeat: repeat;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    row-gap: 50px;
-    text-align: center;
-    justify-items: center;
-    align-items: center;
-    z-index: 1000;
-    h3 {
-        grid-column: span 2;
-    }
-    &:nth-last-child(1) {
-        margin-bottom: 100px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-self: center;
+    .study-center {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        row-gap: 50px;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        h3 {
+            grid-column: span 2;
+        }
+        &:nth-last-child(1) {
+            margin-bottom: 100px;
+        }
     }
 }
 
@@ -236,11 +236,8 @@ $text: #fff0f0;
 footer {
     width: 100vw;
     height: var(--height-footer);
-    background-color: burlywood;
-    z-index: 1;
-    position: sticky;
-    bottom: 0;
-    left: 0;
+    background-image: url("../img/BlackGeometry.png");
+    background-repeat: repeat;
     display: grid;
     grid-area: footer;
 }
