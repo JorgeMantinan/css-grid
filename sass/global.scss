@@ -14,9 +14,14 @@ $text: #FFF0F0;
 $font-family: 'Montserrat', sans-serif;
 $font-size: 16px;
 
+:root {
+  --height-footer: 300px;
+}
+
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 body{

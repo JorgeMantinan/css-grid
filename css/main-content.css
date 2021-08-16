@@ -1,6 +1,10 @@
 /* Palette */
+:root {
+  --height-footer: 300px;
+}
+
 .main-content {
-  padding: 100px 0px;
+  padding-top: 100px;
   background-image: url("../img/WhiteGeometry.png");
   background-repeat: repeat;
   grid-area: main-content;
@@ -173,7 +177,10 @@
 /* Courses */
 .courses {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - var(--height-footer));
+  background-image: url("../img/WhiteGeometry.png");
+  background-repeat: repeat;
+  height: calc(100vh - var(--height-footer));
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 2;
@@ -183,8 +190,6 @@
       grid-template-columns: repeat(1, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
-  /* 6 without extra courses */
-  row-gap: 100px;
   -ms-grid-column-align: center;
       justify-self: center;
 }
@@ -193,7 +198,7 @@
   position: absolute;
   content: "";
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - var(--height-footer) - 10vh);
   margin-top: 10vh;
   background-image: url("../img/WhiteGeometry.png");
   background-repeat: repeat;
@@ -201,7 +206,6 @@
           filter: invert(95%);
   -webkit-clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
-  z-index: 2;
 }
 
 .title-courses {
@@ -212,9 +216,8 @@
 }
 
 .study-center {
-  margin-top: 150px;
+  position: relative;
   width: 100%;
-  height: 100hv;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -232,6 +235,10 @@
 
 .study-center h3 {
   grid-column: span 2;
+}
+
+.study-center:nth-last-child(1) {
+  margin-bottom: 100px;
 }
 
 .course-technology {
@@ -273,5 +280,19 @@
   -webkit-box-shadow: inset 0 0 10px 0 black;
           box-shadow: inset 0 0 10px 0 black;
   z-index: 10;
+}
+
+footer {
+  width: 100vw;
+  height: var(--height-footer);
+  background-color: burlywood;
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-area: footer;
 }
 /*# sourceMappingURL=main-content.css.map */
