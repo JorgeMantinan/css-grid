@@ -115,6 +115,7 @@ $text: #fff0f0;
     border-radius: 1.5rem;
     clip-path: circle(50% at 50% 50%);
     grid-column: span 1;
+    z-index: 5;
     &:nth-child(odd) {
         justify-items: start;
     }
@@ -152,7 +153,6 @@ $text: #fff0f0;
         text-align: center;
     }
 }
-
 
 /* Courses */
 
@@ -234,27 +234,26 @@ $text: #fff0f0;
     h3 {
         margin-bottom: 0px;
         margin-right: 10px;
-        color: rgba(255, 255 ,255, 0);
+        color: rgba(255, 255, 255, 0);
     }
     &:hover {
         position: relative;
         //height: 150px;
-        transform:  translate(30px , 30px);
+        transform: translate(30px, 30px);
         //transform: translate(-15px, - calc(50px - 100px));
         transition: 1.5s;
         .course-technology {
             //transform: translate(0px, -50px);
-            transform:  translate(-20px , -20px);
+            transform: translate(-20px, -20px);
             //transform: rotate( 5deg, 0deg, 0deg);
             transition: 1.5s;
         }
         h3 {
-            color: rgba(255, 255 ,255, 1);
+            color: rgba(255, 255, 255, 1);
             transition: 1.5s;
         }
     }
 }
-
 
 footer {
     width: 100vw;
@@ -263,4 +262,54 @@ footer {
     background-repeat: repeat;
     display: grid;
     grid-area: footer;
+}
+
+/* Small Screen */
+@media screen and (max-width: 768px) {
+    /* Projects */
+    .projects {
+        margin: 0;
+        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+
+    .project {
+        width: 60vh;
+        height: 210px;
+        grid-column: span 1;
+
+        &:before {
+            width: 60vh;
+            height: 210px;
+        }
+        .project-content {
+            padding: 20px 20px;
+        }
+    }
+
+    /* Courses */
+
+    .title-courses {
+        width: 100%;
+        height: 100px;
+    }
+
+    .study-centers {
+        padding: 50px 0px;
+        display: grid;
+        .study-center {
+            padding: 10px 0px;
+            margin-bottom: 50px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            row-gap: 10px;
+            h3 {
+                grid-column: span 1;
+            }
+            &:nth-last-child(1) {
+                margin-bottom: 50px;
+            }
+        }
+    }
 }

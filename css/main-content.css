@@ -126,6 +126,7 @@
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
   grid-column: span 1;
+  z-index: 5;
 }
 
 .technologies:nth-child(odd) {
@@ -326,5 +327,54 @@ footer {
   display: -ms-grid;
   display: grid;
   grid-area: footer;
+}
+
+/* Small Screen */
+@media screen and (max-width: 768px) {
+  /* Projects */
+  .projects {
+    margin: 0;
+    padding: 0;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+  .project {
+    width: 60vh;
+    height: 210px;
+    grid-column: span 1;
+  }
+  .project:before {
+    width: 60vh;
+    height: 210px;
+  }
+  .project .project-content {
+    padding: 20px 20px;
+  }
+  /* Courses */
+  .title-courses {
+    width: 100%;
+    height: 100px;
+  }
+  .study-centers {
+    padding: 50px 0px;
+    display: -ms-grid;
+    display: grid;
+  }
+  .study-centers .study-center {
+    padding: 10px 0px;
+    margin-bottom: 50px;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[1];
+        grid-template-rows: repeat(1, 1fr);
+    row-gap: 10px;
+  }
+  .study-centers .study-center h3 {
+    grid-column: span 1;
+  }
+  .study-centers .study-center:nth-last-child(1) {
+    margin-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=main-content.css.map */
