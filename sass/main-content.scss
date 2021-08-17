@@ -179,16 +179,16 @@ $text: #fff0f0;
 }
 
 .study-centers {
-    padding-top: 150px;
+    padding: 150px 0px;
     width: 100%;
     background-image: url("../img/BlackGeometry.png");
     background-repeat: repeat;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     justify-self: center;
     .study-center {
-        position: relative;
+        padding: 20px 0px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -213,23 +213,46 @@ $text: #fff0f0;
     justify-content: center;
     align-items: center;
     position: absolute;
-    background-color: $secondary-color;
+    background-color: $primary-color;
+    border: 4px solid $secondary-color;
     border-radius: 2.5rem;
-    box-shadow: inset 0 0 10px 0 black;
     z-index: -2;
     transform: translate(-5px, -5px);
 }
 
 .course {
+    margin: 20px 0px;
     width: 500px;
     height: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $fourth-color;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: 4px solid $fourth-color;
     border-radius: 2.5rem;
-    box-shadow: inset 0 0 10px 0 black;
+    transform: translate(15px, 15px);
     z-index: 10;
+    h3 {
+        margin-bottom: 0px;
+        margin-right: 10px;
+        color: rgba(255, 255 ,255, 0);
+    }
+    &:hover {
+        position: relative;
+        //height: 150px;
+        transform:  translate(30px , 30px);
+        //transform: translate(-15px, - calc(50px - 100px));
+        transition: 1.5s;
+        .course-technology {
+            //transform: translate(0px, -50px);
+            transform:  translate(-20px , -20px);
+            //transform: rotate( 5deg, 0deg, 0deg);
+            transition: 1.5s;
+        }
+        h3 {
+            color: rgba(255, 255 ,255, 1);
+            transition: 1.5s;
+        }
+    }
 }
 
 

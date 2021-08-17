@@ -459,7 +459,7 @@ ul.show {
 }
 
 .study-centers {
-  padding-top: 150px;
+  padding: 150px 0px;
   width: 100%;
   background-image: url("../img/BlackGeometry.png");
   background-repeat: repeat;
@@ -467,14 +467,14 @@ ul.show {
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
 .study-centers .study-center {
-  position: relative;
+  padding: 20px 0px;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -511,32 +511,59 @@ ul.show {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  background-color: #db0700;
+  background-color: #000000;
+  border: 4px solid #db0700;
   border-radius: 2.5rem;
-  -webkit-box-shadow: inset 0 0 10px 0 black;
-          box-shadow: inset 0 0 10px 0 black;
   z-index: -2;
   -webkit-transform: translate(-5px, -5px);
           transform: translate(-5px, -5px);
 }
 
 .course {
+  margin: 20px 0px;
   width: 500px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #c2b6b6;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border: 4px solid #c2b6b6;
   border-radius: 2.5rem;
-  -webkit-box-shadow: inset 0 0 10px 0 black;
-          box-shadow: inset 0 0 10px 0 black;
+  -webkit-transform: translate(15px, 15px);
+          transform: translate(15px, 15px);
   z-index: 10;
+}
+
+.course h3 {
+  margin-bottom: 0px;
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0);
+}
+
+.course:hover {
+  position: relative;
+  -webkit-transform: translate(30px, 30px);
+          transform: translate(30px, 30px);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.course:hover .course-technology {
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.course:hover h3 {
+  color: white;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
 
 footer {
