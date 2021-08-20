@@ -41,6 +41,7 @@ body{
     grid-template-areas:"header"
                         "main-content"
                         "footer";
+    overflow-x: hidden;
 }
 
 

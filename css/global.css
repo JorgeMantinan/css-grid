@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Grid Header */
 .header-container {
   background-image: url("../img/HexaBackgroundHeader.jpg");
@@ -267,8 +268,10 @@ ul.show {
       align-content: space-between;
 }
 
+/* TODO Refactor on differents scss projects and courses */
 /* Projects */
 .projects {
+  width: 80%;
   margin-bottom: 0px;
   padding-bottom: 0px;
   display: -ms-grid;
@@ -286,7 +289,8 @@ ul.show {
 }
 
 .project {
-  width: 800px;
+  margin-right: 50px;
+  width: 60vw;
   height: 410px;
   grid-column: span 2;
   z-index: 3;
@@ -295,7 +299,7 @@ ul.show {
 .project:before {
   position: absolute;
   content: "";
-  width: 800px;
+  width: 50vw;
   height: 410px;
   background-size: cover;
   background-position: center;
@@ -314,6 +318,10 @@ ul.show {
 }
 
 .project:nth-child(1):before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: right;
   background-image: url("../img/CasaModerna.jpg");
 }
 
@@ -337,6 +345,7 @@ ul.show {
 }
 
 .project .project-content {
+  width: 70%;
   padding: 20px 20px;
 }
 
@@ -476,6 +485,7 @@ ul.show {
 
 .study-centers .study-center {
   padding: 20px 0px;
+  margin-bottom: 100px;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -579,28 +589,9 @@ footer {
   grid-area: footer;
 }
 
-/* Small Screen */
-@media screen and (max-width: 768px) {
-  /* Projects */
-  .projects {
-    margin: 0;
-    padding: 0;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    row-gap: 20px;
-  }
-  .project {
-    width: 60vh;
-    height: 210px;
-    grid-column: span 1;
-  }
-  .project:before {
-    width: 60vh;
-    height: 210px;
-  }
-  .project .project-content {
-    padding: 20px 20px;
-  }
+/* Media Queries */
+/* Laptop Screen */
+@media screen and (max-width: 1200px) {
   /* Courses */
   .title-courses {
     width: 100%;
@@ -628,11 +619,79 @@ footer {
   }
 }
 
-/* 
-@media screen and (max-width: 600px) {
+/* Ipad Horizontal Screen */
+@media screen and (max-width: 1024px) {
+  /* Projects */
+  .projects {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+    justify-items: center;
+  }
+  .project {
+    margin-right: 0px;
+    width: 80%;
+    height: 210px;
+    grid-column: span 1;
+  }
+  .project:before {
+    width: 80%;
+    height: 210px;
+  }
+  .project .project-content {
+    padding: 20px 20px;
+  }
+}
 
+/* Ipad Screen */
+@media screen and (max-width: 768px) {
+  /* Tamaño course technology */
+  .course-technology {
+    width: 350px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    background-color: #000000;
+    border: 4px solid #db0700;
+    border-radius: 2.5rem;
+    z-index: -2;
+    -webkit-transform: translate(-5px, -5px);
+            transform: translate(-5px, -5px);
+  }
+  .course {
+    margin: 20px 0px;
+    width: 350px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    border: 4px solid #c2b6b6;
+    border-radius: 2.5rem;
+    -webkit-transform: translate(15px, 15px);
+            transform: translate(15px, 15px);
+    z-index: 10;
+  }
+}
 
-} */
+/* Mobile Horizontal Screen */
+/* Mobile Screen */
 /* Palette */
 :root {
   --height-footer: 300px;
@@ -663,6 +722,7 @@ body {
                         "main-content   main-content   main-content   main-content   main-content"
                         "footer         footer         footer         footer         footer"; */
       grid-template-areas: "header" "main-content" "footer";
+  overflow-x: hidden;
 }
 
 /* Button of information */
