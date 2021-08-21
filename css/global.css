@@ -679,7 +679,6 @@ ul.show {
 /* Palette */
 footer {
   width: 100vw;
-  margin-bottom: 50px;
   text-align: center;
   background-image: url("../img/BlackGeometry.png");
   background-repeat: repeat;
@@ -777,6 +776,7 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  gap: 0;
   -ms-grid-rows: 100vh auto 400px;
       grid-template-rows: 100vh auto 400px;
       grid-template-areas: "header" "main-content" "footer";
