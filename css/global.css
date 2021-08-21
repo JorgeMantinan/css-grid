@@ -145,13 +145,16 @@ ul.show {
 .main-header .rrss a {
   color: #968D8D;
   text-decoration: none;
+  -webkit-text-stroke: 0px #FFF0F0;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
 }
 
 .main-header .rrss a:hover, .main-header .rrss a:focus, .main-header .rrss a:active {
   color: transparent;
   -webkit-text-stroke: 1px #FFF0F0;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 /* End Header */
@@ -183,13 +186,14 @@ ul.show {
   -ms-grid-column: 3;
       grid-column-start: 3;
   grid-column-end: -1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .end-header .cookies-text a:hover, .end-header .cookies-text a:focus, .end-header .cookies-text a:active {
   color: #DB0700;
-  -webkit-transition: .5s;
-  transition: .5s;
-  text-decoration: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 /* Small Screen */
@@ -303,6 +307,8 @@ ul.show {
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
   z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .project:nth-child(odd) {
@@ -380,6 +386,8 @@ ul.show {
           clip-path: circle(50% at 50% 50%);
   grid-column: span 1;
   z-index: 5;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .technologies:nth-child(odd) {
@@ -400,6 +408,8 @@ ul.show {
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
   z-index: -1;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .technologies:hover, .technologies:focus {
@@ -718,6 +728,8 @@ footer {
   margin: 0 1%;
   color: #968D8D;
   text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .rrss-footer a:hover, .rrss-footer a:focus, .rrss-footer a:active {
@@ -738,6 +750,10 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 100px;
+}
+
+span {
+  margin: 0 5px;
 }
 
 hr {
@@ -799,13 +815,15 @@ body {
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
+  -webkit-transition: all .7s;
+  transition: all .7s;
 }
 
 .but-info:hover, .but-info:active, .but-info:focus {
   color: #DB0700;
   border: 1px solid #FFF0F0;
-  -webkit-transition: .7s;
-  transition: .7s;
+  -webkit-transition: all .7s;
+  transition: all .7s;
 }
 
 /* Scroll Bar */

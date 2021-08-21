@@ -41,6 +41,8 @@ footer {
   margin: 0 1%;
   color: #968D8D;
   text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .rrss-footer a:hover, .rrss-footer a:focus, .rrss-footer a:active {
@@ -61,6 +63,10 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 100px;
+}
+
+span {
+  margin: 0 5px;
 }
 
 hr {

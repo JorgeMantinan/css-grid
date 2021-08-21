@@ -55,6 +55,8 @@
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
   z-index: -1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .project:nth-child(odd) {
@@ -132,6 +134,8 @@
           clip-path: circle(50% at 50% 50%);
   grid-column: span 1;
   z-index: 5;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .technologies:nth-child(odd) {
@@ -152,6 +156,8 @@
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
   z-index: -1;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .technologies:hover, .technologies:focus {

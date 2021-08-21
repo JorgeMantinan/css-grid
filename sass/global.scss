@@ -56,12 +56,13 @@ body{
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
+  transition: all .7s;
+  
 }
-
 .but-info:hover , .but-info:active, .but-info:focus{
-  color: $secondary-color;
-  border: 1px solid $fifth-color;
-  transition: .7s;
+    color: $secondary-color;
+    border: 1px solid $fifth-color;
+    transition: all .7s;
 }
 
 /* Scroll Bar */

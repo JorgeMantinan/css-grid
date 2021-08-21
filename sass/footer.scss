@@ -42,6 +42,7 @@ footer {
         margin: 0 1%;
         color: $third-color;
         text-decoration: none;
+        transition: .5s;
         &:hover, &:focus, &:active{
             color: transparent;
             -webkit-text-stroke: 1px $text;
@@ -55,6 +56,10 @@ footer {
     justify-content: center;
     align-items: center;
     height: $logo-footer-height;
+}
+
+span{
+    margin: 0 5px;
 }
 
 hr {

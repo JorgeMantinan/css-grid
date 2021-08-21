@@ -111,10 +111,12 @@ ul.show {
         a{
             color: $third-color;
             text-decoration: none;
+            -webkit-text-stroke: 0px $text;
+            transition: all 1.5s;
             &:hover, &:focus, &:active{
                 color: transparent;
                 -webkit-text-stroke: 1px $text;
-                transition: .5s;
+                transition:all .5s;
             }
         }        
     }
@@ -140,10 +142,10 @@ ul.show {
             float: right;
             grid-column-start: 3;
             grid-column-end: -1;
+            transition: all .5s;
             &:hover, &:focus, &:active{
                 color: $secondary-color;
-                transition: .5s;
-                text-decoration: none;
+                transition: all .5s;
             }
         }
     }
