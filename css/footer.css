@@ -1,0 +1,82 @@
+/* Palette */
+footer {
+  width: 100vw;
+  margin-bottom: 50px;
+  text-align: center;
+  background-image: url("../img/BlackGeometry.png");
+  background-repeat: repeat;
+  display: -ms-grid;
+  display: grid;
+  grid-area: footer;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.logo-footer {
+  margin: 0 auto;
+}
+
+.logo-footer img {
+  height: 100px;
+}
+
+.rrss-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  font-size: calc(18px + 1.5vw);
+}
+
+.rrss-footer a {
+  margin: 0 1%;
+  color: #968D8D;
+  text-decoration: none;
+}
+
+.rrss-footer a:hover, .rrss-footer a:focus, .rrss-footer a:active {
+  color: transparent;
+  -webkit-text-stroke: 1px #FFF0F0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.copy-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+}
+
+hr {
+  width: 50%;
+  margin: auto;
+  opacity: 50%;
+  border: 3px solid #DB0700;
+  border-radius: 1.5rem;
+}
+
+/* Small Screen */
+@media screen and (max-width: 1024px) {
+  /* rrss footer */
+  .rrss-footer {
+    font-size: calc(18px + 3.5vw);
+  }
+}
+/*# sourceMappingURL=footer.css.map */

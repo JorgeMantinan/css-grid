@@ -1,5 +1,6 @@
 @import "../sass/header.scss";
 @import "../sass/main-content.scss";
+@import "../sass/footer.scss";
 
 $background-color: #000000;
 
@@ -13,10 +14,6 @@ $fifth-color: #FFF0F0;
 $text: #FFF0F0;
 $font-family: 'Montserrat', sans-serif;
 $font-size: 16px;
-
-:root {
-  --height-footer: 300px;
-}
 
 *{
     margin: 0%;
@@ -34,14 +31,11 @@ body{
 .main-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh repeat(2, auto);
-    /* grid-template-areas:"header         header         header         header         header"
-                        "main-content   main-content   main-content   main-content   main-content"
-                        "footer         footer         footer         footer         footer"; */
+    grid-template-rows: 100vh auto 400px;
     grid-template-areas:"header"
                         "main-content"
                         "footer";
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
