@@ -1,0 +1,68 @@
+/* Palette */
+.popup-about-me-overlay {
+  /*Hides pop-up when there is no "active" class*/
+  display: none;
+  position: absolute;
+  margin: auto;
+  background: #ffffff;
+  border: 3px solid #666666;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-aboutme-overlay.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-aboutme {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.popup-aboutme.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-aboutme-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5%;
+  width: 50%;
+  height: 50%;
+  text-align: left;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000000;
+  border: 2px solid #db0700;
+  border-radius: 1.5rem;
+}
+/*# sourceMappingURL=aboutme.css.map */

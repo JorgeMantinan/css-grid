@@ -47,7 +47,23 @@
                 <div class="personal-information">
                     <h1>Jorge Mantiñán</h1>
                     <h3>Desarrollador FullStack</h3>
-                    <button type="button" class="but-info">Sobre mí</button>
+
+                    <div class="popup-aboutme-overlay">
+                        <div class="popup-aboutme">
+                            <div class="popup-aboutme-content">
+                                <div class="carrousel">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="project-description">
+                                    <p>Soy un desarrollador junior que hace proyectos para mejorar.
+                                        <br>Me encanta frontend, pero dame un café y trabajaré programando lo que quieras.
+                                        <br> Nos vemos ❤️</p>
+                                </div>
+                                <button class="close but-info">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="aboutme" type="button" class="open but-info">Sobre mí</button>
                 </div>
                 <div class="logo-m"><img src="./img/LogoMWhite.png" alt="small-logo-manti"></div>
                 <nav class="rrss">
@@ -98,17 +114,18 @@
                 </div>
                 <div class="project">
                     <div class="project-content">
-                    <h1>Web Inmobiliaria</h1>
-                    <h3>Backend Developer</h3>
-                    <button type="button" class="but-info">Saber más</button>
-                </div>
+                        <h1>Web Inmobiliaria</h1>
+                        <h3>Backend Developer</h3>
+                        <button type="button" class="but-info">Saber más</button>
+                    </div>
                 </div>
 
                 <div class="project">
                     <div class="project-content">
-                    <h1>Web Personal</h1>
-                    <h3>Frontend Developer</h3>
-                    <button type="button" class="but-info">Saber más</button></div>
+                        <h1>Web Personal</h1>
+                        <h3>Frontend Developer</h3>
+                        <button type="button" class="but-info">Saber más</button>
+                    </div>
                 </div>
                 <div class="technologies">
                     <h3>Tecnologías</h3>
@@ -132,48 +149,93 @@
                 </div>
                 <div class="project">
                     <div class="project-content">
-                    <h1>Proyectos para empresas</h1>
-                    <h3>FullStack Developer</h3>
-                    <button type="button" class="but-info">Saber más</button></div>
+                        <h1>Proyectos para empresas</h1>
+                        <h3>FullStack Developer</h3>
+                        <button type="button" class="but-info">Saber más</button>
+                    </div>
                 </div>
 
             </section>
 
-            <section class="courses"><!-- Here is the container -->
-                <div class="title-courses"><h1>Cursos</h1></div>
+            <section class="courses">
+                <!-- Here is the container -->
+                <div class="title-courses">
+                    <h1>Cursos</h1>
+                </div>
                 <div class="study-centers">
                     <div class="study-center">
                         <h3>Udemy</h3>
-                        <div class="course"><div class="course-technology"><h5>Backend</h5></div><h3>...</h3></div>
-                        <div class="course"><div class="course-technology"><h5>Frontend</h5></div><h3>...</h3></div>
-                        <div class="course"><div class="course-technology"><h5>Bases de Datos</h5></div><h3>...</h3></div>
-                        <div class="course"><div class="course-technology"><h5>Git</h5></div><h3>...</h3></div>
-                        <div class="course"><div class="course-technology"><h5>Otros</h5></div><h3>...</h3></div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Backend</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Frontend</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Bases de Datos</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Git</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Otros</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
                     </div>
-    
+
                     <div class="study-center">
                         <h3>ENEB</h3>
-                        <div class="course"><div class="course-technology"><h5>Posgrado Project Management</h5></div><h3>...</h3></div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Posgrado Project Management</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
                     </div>
-    
+
                     <div class="study-center">
                         <h3>Cursos no relacionados</h3>
-                        <div class="course"><div class="course-technology"><h5>Bolsa - Método Josef Ajraf</h5></div><h3>...</h3></div>
-                        <div class="course"><div class="course-technology"><h5>Poker - Formapoker</h5></div><h3>...</h3></div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Bolsa - Método Josef Ajraf</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course">
+                            <div class="course-technology">
+                                <h5>Poker - Formapoker</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
                     </div>
                 </div>
             </section>
-            
+
         </div>
 
         <footer class="footer">
             <hr>
-                <div class="logo-footer"><img src="./img/MantiLogoWhite.png" alt="Manti-Logo-Footer" class="img-fluid"></div>
-                <div class="rrss-footer">
-                    <a href=""><i class="fab fa-github"></i></a>
-                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="copy-footer"><i class="far fa-copyright"></i><span>Desarrollado por Jorge Mantiñán</span></div>
+            <div class="logo-footer"><img src="./img/MantiLogoWhite.png" alt="Manti-Logo-Footer" class="img-fluid">
+            </div>
+            <div class="rrss-footer">
+                <a href=""><i class="fab fa-github"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copy-footer"><i class="far fa-copyright"></i><span>Desarrollado por Jorge Mantiñán</span></div>
         </footer>
 
 
@@ -185,6 +247,8 @@
 
     <!-- Responsive JQuery -->
     <script src="./js/responsive.js"></script>
+    <!-- Aboutme popup -->
+    <script src="./js/aboutme.js"></script>
 
 </body>
 
