@@ -49,15 +49,9 @@ $font-size: 16px;
   list-style: none;
   img {
     width: 100%;
-    height: auto;
-    border-radius: 1.5rem;
-  }
-}
-@supports(object-fit: cover){
-  .slider-project-content img{
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    background-size: cover;
+    border-radius: 1.5rem;
   }
 }
 
@@ -72,4 +66,28 @@ $font-size: 16px;
   height: 30%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.arrow {
+  font-size: 35px;
+}
+
+.arrow-up-down {
+  position: relative;
+}
+
+.arrow-left, .arrow-right{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  -webkit-text-stroke: 1px $primary-color;
+}
+
+.arrow-left {
+  left: calc(10% + 50px);
+}
+.arrow-right {
+  right: calc(10% + 50px);
 }

@@ -59,18 +59,9 @@
 
 .slider-project-content img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-size: cover;
   border-radius: 1.5rem;
-}
-
-@supports ((-o-object-fit: cover) or (object-fit: cover)) {
-  .slider-project-content img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center center;
-       object-position: center center;
-  }
 }
 
 .project-info {
@@ -91,5 +82,34 @@
   height: 30%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.arrow {
+  font-size: 35px;
+}
+
+.arrow-up-down {
+  position: relative;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-text-stroke: 1px #000000;
+}
+
+.arrow-left {
+  left: calc(10% + 50px);
+}
+
+.arrow-right {
+  right: calc(10% + 50px);
 }
 /*# sourceMappingURL=slider-project.css.map */
