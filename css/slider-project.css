@@ -1,9 +1,7 @@
 /* Palette */
 /* TODO REFACTOR Unify popup-aboutme and this element */
 .slidershow-project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,6 +19,12 @@
           flex-direction: column;
   z-index: 100;
   background: rgba(0, 0, 0, 0.7);
+}
+
+.slidershow-project.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .slider-project {
@@ -111,5 +115,11 @@
 
 .arrow-right {
   right: calc(10% + 50px);
+}
+
+.close-project {
+  position: absolute;
+  top: 92.5%;
+  left: auto;
 }
 /*# sourceMappingURL=slider-project.css.map */
