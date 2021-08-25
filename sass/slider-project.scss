@@ -13,7 +13,7 @@ $font-size: 16px;
 
 /* TODO REFACTOR Unify popup-aboutme and this element */
 .slidershow-project {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,9 +49,15 @@ $font-size: 16px;
   list-style: none;
   img {
     width: 100%;
-    height: 100%;
-    background-size: cover;
+    height: auto;
     border-radius: 1.5rem;
+  }
+}
+@supports(object-fit: cover){
+  .slider-project-content img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
