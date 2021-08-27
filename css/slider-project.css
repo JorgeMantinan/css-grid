@@ -86,6 +86,20 @@
   height: 30%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 1.5rem 1.5rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+/* Hide project info slider */
+.hide {
+  height: 5%;
+  top: calc(85% - 2px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hide h1, .hide p {
+  display: none;
 }
 
 .arrow {
@@ -94,6 +108,8 @@
 
 .arrow-up-down {
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .arrow-left, .arrow-right {

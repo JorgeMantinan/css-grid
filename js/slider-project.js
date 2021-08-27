@@ -48,6 +48,14 @@ $(".arrow-left").on("click", function () {
 });
 
 
+/* Hide project info slider */
+$(".arrow-up-down").on("click", function () {
+    $(".project-info").toggleClass("hide");
+    $(".arrow-up-down").toggleClass("rotate180");
+});
+
+/* display:inline-block */
+
 /* Functions */
 
 var arrowChangeImg = function(direction) {

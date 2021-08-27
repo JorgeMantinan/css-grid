@@ -929,6 +929,20 @@ hr {
   height: 30%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 1.5rem 1.5rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+/* Hide project info slider */
+.hide {
+  height: 5%;
+  top: calc(85% - 2px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hide h1, .hide p {
+  display: none;
 }
 
 .arrow {
@@ -937,6 +951,8 @@ hr {
 
 .arrow-up-down {
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .arrow-left, .arrow-right {
@@ -1018,6 +1034,15 @@ body {
   border: 1px solid #FFF0F0;
   -webkit-transition: all .7s;
   transition: all .7s;
+}
+
+/* Rotate 180 */
+.rotate180 {
+  position: relative;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 /* Scroll Bar */
