@@ -1,5 +1,5 @@
 let projectImgs = [
-    {0: "./img/WhiteGeometry.png",1: "./img/LogoMantiWhiteBackBlack.png"},
+    {0: "./img/portfolio-inicio.png",1: "./img/portfolio-cursos.png"},
     {0: "./img/EquipoEmpresarial.jpg",1: "./img/CasaModerna2.jpg"},
     {0: "./img/project-mantirenfe.png"},
     {0: "./img/project-mantigestor.png"},
@@ -8,8 +8,28 @@ let projectImgs = [
 ];
 
 let project = [
-    {img: projectImgs[0], title: "Web Personal", description: "Descripción del proyecto 1", url: ""},
-    {img: projectImgs[1], title: "Proyectos para empresas", description: "Descripción del proyecto 2", url: ""},
+    {
+        img: projectImgs[0],
+        title: "Web Personal",
+        description: "Mi portfolio personal. Empecé este sitio en 2021 a mano, sin frameworks ni IA: " +
+            "solo HTML, CSS GRID, Sass, JavaScript y jQuery aprendidos de la documentación y vídeos. " +
+            "En octubre de 2026 lo retomé para terminar lo que había dejado pendiente y mejorarlo " +
+            "con IA: el commit d376721 marca el inicio de esa etapa. Sigue siendo una web estática, " +
+            "sin más build que el compilador de Sass.",
+        url: ""
+    },
+    {
+        img: projectImgs[1],
+        title: "Proyectos para empresas",
+        description: "Resumen de mi carrera: empecé en aCore automatizando pruebas Java (JUnit, Mockito, " +
+            "Selenium), seguí en Atos con desarrollo fullstack Java SpringBoot + Angular (roles OAuth2, " +
+            "gestión de excepciones) y de 2021 a 2023 en Minsait: 14 meses de Scriptcase (PHP y " +
+            "JavaScript), fullstack NodeJS + Angular, PostgreSQL, captura de imágenes con " +
+            "geolocalización, edición masiva de millones de datos y reporting en Excel, además de " +
+            "backend NodeJS con Ionic. Ahora sigo formándome y trabajando por cuenta propia en " +
+            "proyectos propios.",
+        url: ""
+    },
     {
         img: projectImgs[2],
         title: "MantiRenfe",

@@ -67,6 +67,8 @@ $font-size: 16px;
   top: calc(60% - 2px);
   width: calc(80% - 4px);
   height: 30%;
+  padding: 10px 20px;
+  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 1.5rem 1.5rem;
   transition: 1s;
