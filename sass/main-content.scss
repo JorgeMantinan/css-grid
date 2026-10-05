@@ -156,7 +156,6 @@ $text: #fff0f0;
     background-repeat: repeat;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, auto);
     justify-self: center;
     .study-center {
         padding: 20px 0px;
@@ -174,6 +173,10 @@ $text: #fff0f0;
         }
         &:nth-last-child(1) {
             margin-bottom: 100px;
+        }
+        /* Lone pill (e.g. the posgrado) centered across both columns */
+        &.study-center-single .course {
+            grid-column: 1 / -1;
         }
     }
 }

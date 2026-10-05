@@ -70,11 +70,13 @@ Breakpoints (siempre `max-width`): 1200 / 1024 / 768 (menú hamburguesa) / 600.
    con ellos `js/responsive.js`).
 2. `.popup-about-me-overlay` (scss) ≠ `.popup-aboutme-overlay` (HTML): regla muerta,
    no "arreglar" renombrando sin revisar `.active`.
-3. `.study-centers` usa `grid-template-rows: repeat(3, auto)` hardcodeado: si se
-   añade un cuarto bloque de cursos hay que pasarlo a `auto`.
-4. El hover de 3 puntos de `.course` usa `<h3>...</h3>` invisible
-   (`sass/main-content.scss`, `color: rgba(255,255,255,0)` → `1` en `:hover`).
-5. `libs/bootstrap-5.0.2/` es vendor copiado; no editar.
+3. **Popups**: hay tres y todos usan el mismo patrón (clase `.active` con jQuery):
+   "Sobre mí" (`js/aboutme.js`), slider de proyectos (`js/slider-project.js`) y
+   **cursos** (`js/courses.js`: cada píldora `.course` tiene `data-course` que
+   apunta a la clave de `coursesData` — añadir un curso nuevo = añadir entrada
+   ahí + la píldora en `index.html`). El hover de 3 puntos de `.course` usa un
+   `<h3>...</h3>` invisible (`color: rgba(255,255,255,0)` → `1` en `:hover`).
+4. `libs/bootstrap-5.0.2/` es vendor copiado; no editar.
 
 ## Verificación antes de cada commit
 

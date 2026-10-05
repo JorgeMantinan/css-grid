@@ -312,7 +312,6 @@ ul.show {
   background-repeat: repeat;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, auto);
   justify-self: center;
 }
 .study-centers .study-center {
@@ -332,6 +331,12 @@ ul.show {
 }
 .study-centers .study-center:nth-last-child(1) {
   margin-bottom: 100px;
+}
+.study-centers .study-center {
+  /* Lone pill (e.g. the posgrado) centered across both columns */
+}
+.study-centers .study-center.study-center-single .course {
+  grid-column: 1/-1;
 }
 
 .course-technology {
@@ -771,6 +776,67 @@ hr {
 @media screen and (max-width: 768px) {
   .cookies-page .cookies-content {
     width: 100%;
+    padding: 25px;
+  }
+}
+/* Palette */
+/* Popup with the list of courses of each .course pill */
+.popup-courses-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.popup-courses-overlay.active {
+  display: flex;
+}
+
+.popup-courses-content {
+  width: 600px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 40px;
+  text-align: left;
+  background-color: #000000;
+  border: 2px solid #db0700;
+  border-radius: 1.5rem;
+}
+.popup-courses-content h2 {
+  margin-bottom: 20px;
+  font-size: calc(14px + 1vw);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+.popup-courses-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.popup-courses-content li {
+  padding: 12px 0px;
+  font-weight: 300;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 240, 240, 0.15);
+}
+.popup-courses-content li:last-child {
+  border-bottom: 0;
+}
+.popup-courses-content .close-courses {
+  display: block;
+  margin: 25px auto 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup-courses-content {
     padding: 25px;
   }
 }

@@ -162,63 +162,116 @@
                 </div>
                 <div class="study-centers">
                     <div class="study-center">
-                        <h3>Udemy</h3>
-                        <div class="course">
+                        <h3>Desarrollo &amp; Programación</h3>
+                        <div class="course" data-course="scriptcase">
                             <div class="course-technology">
-                                <h5>Backend</h5>
+                                <h5>PHP &amp; Scriptcase</h5>
                             </div>
                             <h3>...</h3>
                         </div>
-                        <div class="course">
+                        <div class="course" data-course="bash">
                             <div class="course-technology">
-                                <h5>Frontend</h5>
+                                <h5>Linux &amp; Bash</h5>
                             </div>
                             <h3>...</h3>
                         </div>
-                        <div class="course">
+                        <div class="course" data-course="blockchain">
                             <div class="course-technology">
-                                <h5>Bases de Datos</h5>
+                                <h5>Blockchain &amp; Solidity</h5>
                             </div>
                             <h3>...</h3>
                         </div>
-                        <div class="course">
+                        <div class="course" data-course="htmlcss">
                             <div class="course-technology">
-                                <h5>Git</h5>
-                            </div>
-                            <h3>...</h3>
-                        </div>
-                        <div class="course">
-                            <div class="course-technology">
-                                <h5>Otros</h5>
+                                <h5>HTML &amp; CSS</h5>
                             </div>
                             <h3>...</h3>
                         </div>
                     </div>
 
                     <div class="study-center">
-                        <h3>ENEB</h3>
-                        <div class="course">
+                        <h3>Marketing &amp; eCommerce</h3>
+                        <div class="course" data-course="marketing">
                             <div class="course-technology">
-                                <h5>Posgrado Project Management</h5>
+                                <h5>Marketing digital</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course" data-course="analitica">
+                            <div class="course-technology">
+                                <h5>Analítica web</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course" data-course="apps">
+                            <div class="course-technology">
+                                <h5>Apps móviles</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course" data-course="ecommerce">
+                            <div class="course-technology">
+                                <h5>eCommerce</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                    </div>
+
+                    <div class="study-center study-center-single">
+                        <h3>ENEB · Universidad Isabel I</h3>
+                        <div class="course" data-course="posgrado">
+                            <div class="course-technology">
+                                <h5>Project Management · Cum Laude</h5>
                             </div>
                             <h3>...</h3>
                         </div>
                     </div>
 
                     <div class="study-center">
-                        <h3>Cursos no relacionados</h3>
-                        <div class="course">
+                        <h3>Formación &amp; Idiomas</h3>
+                        <div class="course" data-course="fp">
                             <div class="course-technology">
-                                <h5>Bolsa - Método Josef Ajraf</h5>
+                                <h5>FP Superior - DAM</h5>
                             </div>
                             <h3>...</h3>
                         </div>
-                        <div class="course">
+                        <div class="course" data-course="idiomas">
                             <div class="course-technology">
-                                <h5>Poker - Formapoker</h5>
+                                <h5>Idiomas</h5>
                             </div>
                             <h3>...</h3>
                         </div>
+                    </div>
+
+                    <div class="study-center">
+                        <h3>Experiencias extra</h3>
+                        <div class="course" data-course="poker">
+                            <div class="course-technology">
+                                <h5>Poker profesional</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course" data-course="bolsa">
+                            <div class="course-technology">
+                                <h5>Bolsa</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                        <div class="course" data-course="crypto">
+                            <div class="course-technology">
+                                <h5>Cryptoactivos</h5>
+                            </div>
+                            <h3>...</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Courses popup -->
+                <div class="popup-courses-overlay">
+                    <div class="popup-courses-content">
+                        <h2 id="course-popup-title">Cursos</h2>
+                        <ul id="course-popup-list"></ul>
+                        <button type="button" class="close-courses but-info">Volver</button>
                     </div>
                 </div>
             </section>
@@ -263,6 +316,8 @@
     <script src="./js/aboutme.js"></script>
     <!-- Slider project -->
     <script src="./js/slider-project.js"></script>
+    <!-- Courses popups -->
+    <script src="./js/courses.js"></script>
 
 </body>
 
