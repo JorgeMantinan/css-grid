@@ -1,10 +1,18 @@
 let projectImgs = [
     {0: "./img/portfolio-inicio.png",1: "./img/portfolio-cursos.png"},
     {0: "./img/EquipoEmpresarial.jpg"},
-    {0: "./img/project-mantirenfe.png"},
-    {0: "./img/project-mantigestor.png"},
-    {0: "./img/project-manti-twitch.png"},
-    {0: "./img/project-bot.png"}
+    {0: "./img/renfe-1-inicio.png",1: "./img/renfe-2-caracteristicas.png",
+        2: "./img/renfe-3-como-funciona.png",3: "./img/renfe-4-trenes.png",
+        4: "./img/renfe-5-trayecto.png",5: "./img/renfe-6-mapa.png",
+        6: "./img/renfe-7-registro.png"},
+    {0: "./img/gestor-1-inicio.png",1: "./img/gestor-2-funciones.png",
+        2: "./img/gestor-3-demo.png",3: "./img/gestor-4-opiniones.png",
+        4: "./img/gestor-5-precios.png"},
+    {0: "./img/twitch-1-inicio.png",1: "./img/twitch-2-contacto.png",
+        2: "./img/twitch-3-panel-usuario.png",3: "./img/twitch-4-ruleta.png",
+        4: "./img/twitch-5-barcos.png",5: "./img/twitch-6-bingo.png"},
+    {0: "./img/bot-1-informe.png",1: "./img/bot-2-tabla.png",
+        2: "./img/bot-3-informe-oscuro.png"}
 ];
 
 let project = [
