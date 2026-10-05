@@ -10,7 +10,9 @@ let projectImgs = [
         4: "./img/gestor-5-precios.png"},
     {0: "./img/twitch-1-inicio.png",1: "./img/twitch-2-contacto.png",
         2: "./img/twitch-3-panel-usuario.png",3: "./img/twitch-4-ruleta.png",
-        4: "./img/twitch-5-barcos.png",5: "./img/twitch-6-bingo.png"},
+        4: "./img/twitch-7-ruleta-ganador.png",5: "./img/twitch-5-barcos.png",
+        6: "./img/twitch-8-barcos-pelea.png",7: "./img/twitch-9-bingo-participantes.png",
+        8: "./img/twitch-6-bingo.png"},
     {0: "./img/bot-1-informe.png",1: "./img/bot-2-tabla.png",
         2: "./img/bot-3-informe-oscuro.png"}
 ];
