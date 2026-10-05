@@ -1,11 +1,44 @@
 let projectImgs = [
     {0: "./img/WhiteGeometry.png",1: "./img/LogoMantiWhiteBackBlack.png"},
-    {0: "./img/EquipoEmpresarial.jpg",1: "./img/CasaModerna2.jpg"}
+    {0: "./img/EquipoEmpresarial.jpg",1: "./img/CasaModerna2.jpg"},
+    {0: "./img/project-mantirenfe.png"},
+    {0: "./img/project-mantigestor.png"},
+    {0: "./img/project-manti-twitch.png"},
+    {0: "./img/CodigoProgramacion.jpg"}
 ];
 
 let project = [
-    {img: projectImgs[0], title: "Web Personal", description: "Descripción del proyecto 1"},
-    {img: projectImgs[1], title: "Proyectos para empresas", description: "Descripción del proyecto 2"}
+    {img: projectImgs[0], title: "Web Personal", description: "Descripción del proyecto 1", url: ""},
+    {img: projectImgs[1], title: "Proyectos para empresas", description: "Descripción del proyecto 2", url: ""},
+    {
+        img: projectImgs[2],
+        title: "MantiRenfe",
+        description: "Vigila las plazas libres de tus trenes y te avisa en cuanto se libera una, " +
+            "con mapa en tiempo real, cuenta atrás a tu salida y avisos según tu bono. " +
+            "Instalable como app en Android e iPhone (PWA).",
+        url: "https://mantirenfe.vercel.app"
+    },
+    {
+        img: projectImgs[3],
+        title: "MantiGestor",
+        description: "Gestión para autónomos con IA: fotografía facturas, controla tu IVA e IRPF, " +
+            "prepara la declaración de la renta y gestiona tu negocio en un solo lugar.",
+        url: "https://mantigestor.vercel.app"
+    },
+    {
+        img: projectImgs[4],
+        title: "MantiTwitch",
+        description: "Suite de interacción para Twitch: sorteos y dinámicas con el chat de tu canal, " +
+            "con perfiles de usuario, moderador y streamer.",
+        url: "https://manti-twitch.vercel.app"
+    },
+    {
+        img: projectImgs[5],
+        title: "Bot de licitaciones",
+        description: "Bot en Python creado con IA que obtiene licitaciones públicas de forma " +
+            "automatizada para no perderse ninguna oportunidad.",
+        url: ""
+    }
 ];
 
 let indexImg = 0;
@@ -27,6 +60,13 @@ $(".project").on("click", function () {
 
     indexImg = 0;
     $("#img-slider").attr('src', project[indexProject].img[indexImg]);
+
+    /* Show the "Ver web" link only if the project is deployed */
+    if (project[indexProject].url) {
+        $("#link-project").attr("href", project[indexProject].url).show();
+    } else {
+        $("#link-project").hide();
+    }
 
 });
 

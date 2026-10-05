@@ -70,6 +70,10 @@ $font-size: 16px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 1.5rem 1.5rem;
   transition: 1s;
+  a {
+    align-self: center;
+    max-width: 200px;
+  }
 }
 
 //TODO Refactor
@@ -80,6 +84,9 @@ $font-size: 16px;
   top: calc(85% - 2px);
   transition: 1s;
   h1, p {
+    display: none;
+  }
+  a {
     display: none;
   }
 }

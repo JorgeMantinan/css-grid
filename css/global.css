@@ -243,6 +243,25 @@ ul.show {
 .project.project-empresas:before {
   background-image: url("../img/EquipoEmpresarial.jpg");
 }
+.project.project-renfe:before {
+  background-image: url("../img/project-mantirenfe.png");
+}
+.project.project-gestor:before {
+  background-image: url("../img/project-mantigestor.png");
+}
+.project.project-twitch:before {
+  background-image: url("../img/project-manti-twitch.png");
+}
+.project.project-bot:before {
+  background-image: url("../img/CodigoProgramacion.jpg");
+}
+.project {
+  /* Screenshots with a light background need a darker base so the
+     off-white title stays readable (hover rule below still wins) */
+}
+.project.project-renfe:before, .project.project-gestor:before, .project.project-twitch:before {
+  filter: brightness(40%);
+}
 .project:hover:before, .project:focus:before {
   filter: brightness(30%);
   transition: 0.8s;
@@ -651,6 +670,10 @@ hr {
   border-radius: 0 0 1.5rem 1.5rem;
   transition: 1s;
 }
+.project-info a {
+  align-self: center;
+  max-width: 200px;
+}
 
 /* Hide project info slider */
 .hide {
@@ -659,6 +682,9 @@ hr {
   transition: 1s;
 }
 .hide h1, .hide p {
+  display: none;
+}
+.hide a {
   display: none;
 }
 

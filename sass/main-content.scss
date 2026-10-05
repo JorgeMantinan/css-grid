@@ -72,6 +72,35 @@ $text: #fff0f0;
             background-image: url("../img/EquipoEmpresarial.jpg");
         }
     }
+    &.project-renfe {
+        &:before {
+            background-image: url("../img/project-mantirenfe.png");
+        }
+    }
+    &.project-gestor {
+        &:before {
+            background-image: url("../img/project-mantigestor.png");
+        }
+    }
+    &.project-twitch {
+        &:before {
+            background-image: url("../img/project-manti-twitch.png");
+        }
+    }
+    &.project-bot {
+        &:before {
+            background-image: url("../img/CodigoProgramacion.jpg");
+        }
+    }
+    /* Screenshots with a light background need a darker base so the
+       off-white title stays readable (hover rule below still wins) */
+    &.project-renfe,
+    &.project-gestor,
+    &.project-twitch {
+        &:before {
+            filter: brightness(40%);
+        }
+    }
     &:hover,
     &:focus {
         &:before {
