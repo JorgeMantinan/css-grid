@@ -281,6 +281,27 @@ ul.show {
   font-weight: 300;
   line-height: 1.125;
 }
+.project .project-content ul.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 15px 0;
+  padding: 0;
+  list-style: none;
+}
+.project .project-content ul.project-tech li {
+  margin-right: 14px;
+  font-size: calc(8px + 0.5vw);
+  font-weight: 300;
+  color: rgba(255, 240, 240, 0.7);
+}
+.project .project-content ul.project-tech li::after {
+  content: "·";
+  margin-left: 14px;
+  color: #db0700;
+}
+.project .project-content ul.project-tech li:last-child::after {
+  content: "";
+}
 
 /* Courses */
 .courses {
@@ -658,7 +679,8 @@ hr {
 .slider-project-content img {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: contain;
+  background-color: #000000;
   border-radius: 1.5rem;
 }
 
@@ -677,10 +699,6 @@ hr {
   border-radius: 0 0 1.5rem 1.5rem;
   transition: 1s;
 }
-.project-info a {
-  align-self: center;
-  max-width: 200px;
-}
 
 /* Hide project info slider */
 .hide {
@@ -689,9 +707,6 @@ hr {
   transition: 1s;
 }
 .hide h1, .hide p {
-  display: none;
-}
-.hide a {
   display: none;
 }
 
@@ -721,10 +736,14 @@ hr {
   right: calc(10% + 50px);
 }
 
-.close-project {
+.slider-actions {
   position: absolute;
-  top: 92.5%;
-  left: auto;
+  top: 91%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Palette */

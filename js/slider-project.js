@@ -1,10 +1,10 @@
 let projectImgs = [
     {0: "./img/portfolio-inicio.png",1: "./img/portfolio-cursos.png"},
-    {0: "./img/EquipoEmpresarial.jpg",1: "./img/CasaModerna2.jpg"},
+    {0: "./img/EquipoEmpresarial.jpg"},
     {0: "./img/project-mantirenfe.png"},
     {0: "./img/project-mantigestor.png"},
     {0: "./img/project-manti-twitch.png"},
-    {0: "./img/CodigoProgramacion.jpg"}
+    {0: "./img/project-bot.png"}
 ];
 
 let project = [
@@ -80,6 +80,13 @@ $(".project").on("click", function () {
 
     indexImg = 0;
     $("#img-slider").attr('src', project[indexProject].img[indexImg]);
+
+    /* Only one image: the arrows do nothing, hide them */
+    if (countImgs > 1) {
+        $(".arrow-left, .arrow-right").css("display", "flex");
+    } else {
+        $(".arrow-left, .arrow-right").css("display", "none");
+    }
 
     /* Show the "Ver web" link only if the project is deployed */
     if (project[indexProject].url) {
