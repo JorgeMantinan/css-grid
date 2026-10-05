@@ -44,10 +44,11 @@ const coursesData = {
         "Probabilidad, estadística, gestión de bankroll y toma de decisiones bajo incertidumbre"
     ],
     bolsa: [
-        "Inversión en bolsa — formación autodidacta con el método Josef Ajraf"
+        "Inversión y operativa en bolsa"
     ],
     crypto: [
-        "Contratos de cryptoactivos — formación autodidacta"
+        "Informado del mundo de los criptoactivos",
+        "Smart contracts"
     ]
 };
 
