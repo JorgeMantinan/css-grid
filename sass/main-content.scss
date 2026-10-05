@@ -44,6 +44,7 @@ $text: #fff0f0;
     width: 60vw;
     height: 410px;
     z-index: 3;
+    cursor: pointer;
     &:nth-child(odd) {
         grid-column: 1 / 3;
     }

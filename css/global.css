@@ -218,6 +218,7 @@ ul.show {
   width: 60vw;
   height: 410px;
   z-index: 3;
+  cursor: pointer;
 }
 .project:nth-child(odd) {
   grid-column: 1/3;
@@ -679,7 +680,8 @@ hr {
 .slider-project-content img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center top;
   background-color: #000000;
   border-radius: 1.5rem;
 }
