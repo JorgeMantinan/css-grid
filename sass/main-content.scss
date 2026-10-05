@@ -16,10 +16,11 @@ $text: #fff0f0;
     grid-area: main-content;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
         "projects"
-        "courses";
+        "courses"
+        "contact";
     align-content: space-between;
 }
 
@@ -33,7 +34,7 @@ $text: #fff0f0;
     display: grid;
     grid-area: projects;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: auto;
     row-gap: 200px;
     justify-self: center;
 }
@@ -42,8 +43,13 @@ $text: #fff0f0;
     margin-right: 50px;
     width: 60vw;
     height: 410px;
-    grid-column: span 2;
     z-index: 3;
+    &:nth-child(odd) {
+        grid-column: 1 / 3;
+    }
+    &:nth-child(even) {
+        grid-column: 2 / 4;
+    }
     &:before {
         position: absolute;
         content: "";
@@ -56,30 +62,12 @@ $text: #fff0f0;
         z-index: -1;
         transition: 0.8s;
     }
-    &:nth-child(odd) {
-        justify-items: end;
-    }
-    &:nth-child(even) {
-        justify-items: start;
-    }
-    &:nth-child(1) {
-        &:before {
-            display: flex;
-            justify-items: right;
-            background-image: url("../img/CasaModerna.jpg");
-        }
-    }
-    &:nth-child(4) {
-        &:before {
-            background-image: url("../img/CasaModerna2.jpg");
-        }
-    }
-    &:nth-child(5) {
+    &.project-personal {
         &:before {
             background-image: url("../img/LogoMantiWhiteBackBlack.png");
         }
     }
-    &:nth-child(8) {
+    &.project-empresas {
         &:before {
             background-image: url("../img/EquipoEmpresarial.jpg");
         }
@@ -92,72 +80,20 @@ $text: #fff0f0;
         }
     }
     .project-content {
-        width: 70%;
-        padding: 20px 20px;
-        h1 {
-            font-size: calc(18px + 2.5vw);
-            font-weight: 600;
-            line-height: 1.125;
+            width: 70%;
+            padding: 20px 20px;
+            h1 {
+                font-size: calc(18px + 2.5vw);
+                font-weight: 600;
+                line-height: 1.125;
+            }
+            h3 {
+                margin-bottom: 0.5em;
+                font-size: calc(12px + 1.5vw);
+                font-weight: 300;
+                line-height: 1.125;
+            }
         }
-        h3 {
-            margin-bottom: 0.5em;
-            font-size: calc(12px + 1.5vw);
-            font-weight: 300;
-            line-height: 1.125;
-        }
-    }
-}
-
-.technologies {
-    width: 250px;
-    height: 250px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 1.5rem;
-    clip-path: circle(50% at 50% 50%);
-    grid-column: span 1;
-    z-index: 5;
-    transition: 1.2s;
-    &:nth-child(odd) {
-        justify-items: start;
-    }
-    &:nth-child(even) {
-        justify-items: end;
-    }
-    &:before {
-        position: absolute;
-        content: "";
-        width: 250px;
-        height: 250px;
-        background-image: url("../img/CodigoProgramacion.jpg");
-        background-size: cover;
-        filter: brightness(70%);
-        z-index: -1;
-        transition: 1.2s;
-    }
-    &:hover,
-    &:focus {
-        clip-path: circle(70% at 50% 50%);
-        transition: 1.2s;
-        ul {
-            display: block;
-        }
-        &:before {
-            filter: brightness(30%);
-            transition: 1.2s;
-        }
-    }
-
-    ul {
-        display: none;
-        font-size: calc(6px + 1.2vh);
-        list-style: none;
-        padding-left: 0;
-        text-align: center;
-    }
 }
 
 /* Courses */
@@ -263,6 +199,39 @@ $text: #fff0f0;
 }
 
 
+/* Contact */
+
+.contact {
+    grid-area: contact;
+    width: 100%;
+    padding: 100px 0px;
+    background-image: url("../img/BlackGeometry.png");
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .contact-content {
+        h1 {
+            font-size: calc(18px + 2.5vw);
+            font-weight: 600;
+            line-height: 1.125;
+        }
+        p {
+            margin: 20px 0px 30px 0px;
+            font-weight: 300;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            a {
+                margin: 10px;
+            }
+        }
+    }
+}
+
 /* Media Queries */
 
 /* Laptop Screen */
@@ -313,6 +282,10 @@ $text: #fff0f0;
         width: 80%;
         height: 210px;
         grid-column: span 1;
+        &:nth-child(odd),
+        &:nth-child(even) {
+            grid-column: span 1;
+        }
         &:before {
             width: 80%;
             height: 210px;

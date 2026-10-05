@@ -32,10 +32,9 @@
             <nav class="menu">
                 <div class="logo"><img src="./img/MantiLogoWhite.png" alt="Manti-Logo" class="img-fluid"></div>
                 <ul class="menu_links">
-                    <li><a href="#" class="link-primary">PORTAFOLIO</a></li>
-                    <li><a href="#" class="link-primary">CURSOS</a></li>
-                    <li><a href="#" class="link-primary">CONTACTO</a></li>
-                    <li><a href="#" class="link-primary">CC</a></li>
+                    <li><a href="#proyectos" class="link-primary">PORTAFOLIO</a></li>
+                    <li><a href="#cursos" class="link-primary">CURSOS</a></li>
+                    <li><a href="#contacto" class="link-primary">CONTACTO</a></li>
                 </ul>
                 <span class="btn_menu">
                     <i class="fas fa-bars"></i>
@@ -65,8 +64,11 @@
                 </div>
                 <div class="logo-m"><img src="./img/LogoMWhite.png" alt="small-logo-manti"></div>
                 <nav class="rrss">
-                    <div><a href=""><i class="fab fa-github"></i></a></div>
-                    <div><a href=""><i class="fab fa-linkedin-in"></i></a></div>
+                    <div><a href="https://github.com/JorgeMantinan" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub de Jorge Mantiñán"><i class="fab fa-github"></i></a></div>
+                    <div><a href="https://www.linkedin.com/in/jorge-manti%C3%B1%C3%A1n-montero/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn de Jorge Mantiñán"><i
+                                class="fab fa-linkedin-in"></i></a></div>
                 </nav>
             </div>
 
@@ -75,75 +77,22 @@
                     Proyectos
                 </div>
                 <div class="cookies-text">
-                    <a href="#">Cookies</a>
+                    <a href="cookies.html">Cookies</a>
                 </div>
 
             </div>
 
         </header>
         <div class="main-content">
-            <section class="projects">
-                <div class="project">
-                    <div class="project-content">
-                        <h1>Web Inmobiliaria</h1>
-                        <h3>Frontend developer</h3>
-                        <!-- TODO btn-info (different style) to this and change "Sobre mí" button for a new btn-about with the same style that now-->
-                        <button type="button" class="but-info">Saber más</button>
-                    </div>
-                </div>
-                <div class="technologies">
-                    <h3>Tecnologías</h3>
-                    <ul class="list-technologies">
-                        <li>Angular</li>
-                        <li>Sass</li>
-                        <li>Boostrap</li>
-                        <li>Angular Material</li>
-                    </ul>
-                </div>
-
-                <div class="technologies">
-                    <h3>Tecnologías</h3>
-                    <ul class="list-technologies">
-                        <li>Spring Framework</li>
-                        <li>MySql</li>
-                    </ul>
-                </div>
-                <div class="project">
-                    <div class="project-content">
-                        <h1>Web Inmobiliaria</h1>
-                        <h3>Backend Developer</h3>
-                        <button type="button" class="but-info">Saber más</button>
-                    </div>
-                </div>
-
-                <div class="project">
+            <section class="projects" id="proyectos">
+                <div class="project project-personal" data-project="0">
                     <div class="project-content">
                         <h1>Web Personal</h1>
                         <h3>Frontend Developer</h3>
                         <button type="button" class="but-info">Saber más</button>
                     </div>
                 </div>
-                <div class="technologies">
-                    <h3>Tecnologías</h3>
-                    <ul class="list-technologies">
-                        <li>Html</li>
-                        <li>Scss</li>
-                        <li>Javascript</li>
-                    </ul>
-                </div>
-
-                <div class="technologies">
-                    <h3>Tecnologías</h3>
-                    <ul class="list-technologies">
-                        <li>Angular</li>
-                        <li>Spring Framework</li>
-                        <li>MySql</li>
-                        <li>Sass</li>
-                        <li>Boostrap</li>
-                        <li>Angular Material</li>
-                    </ul>
-                </div>
-                <div class="project">
+                <div class="project project-empresas" data-project="1">
                     <div class="project-content">
                         <h1>Proyectos para empresas</h1>
                         <h3>FullStack Developer</h3>
@@ -176,7 +125,7 @@
                 </div>
             </section>
 
-            <section class="courses">
+            <section class="courses" id="cursos">
                 <!-- Here is the container -->
                 <div class="title-courses">
                     <h1>Cursos</h1>
@@ -244,6 +193,19 @@
                 </div>
             </section>
 
+            <section class="contact" id="contacto">
+                <div class="contact-content">
+                    <h1>Contacto</h1>
+                    <p>¿Tienes un proyecto o una idea? Hablemos.</p>
+                    <div class="contact-links">
+                        <a class="but-info" href="https://github.com/JorgeMantinan" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        <a class="but-info" href="https://www.linkedin.com/in/jorge-manti%C3%B1%C3%A1n-montero/"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
         <footer class="footer">
@@ -251,8 +213,11 @@
             <div class="logo-footer"><img src="./img/MantiLogoWhite.png" alt="Manti-Logo-Footer" class="img-fluid">
             </div>
             <div class="rrss-footer">
-                <a href=""><i class="fab fa-github"></i></a>
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/JorgeMantinan" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub de Jorge Mantiñán"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jorge-manti%C3%B1%C3%A1n-montero/" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn de Jorge Mantiñán"><i
+                        class="fab fa-linkedin-in"></i></a>
             </div>
             <div class="copy-footer"><i class="far fa-copyright"></i><span>Desarrollado por Jorge Mantiñán</span></div>
         </footer>
@@ -264,8 +229,6 @@
     <!-- Boostrap 5.0 -->
     <script src="libs/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
 
-    <!-- Responsive JQuery -->
-    <script src="./js/responsive.js"></script>
     <!-- Aboutme popup -->
     <script src="./js/aboutme.js"></script>
     <!-- Slider project -->

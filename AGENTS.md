@@ -62,13 +62,16 @@ Breakpoints (siempre `max-width`): 1200 / 1024 / 768 (menú hamburguesa) / 600.
 
 ## Peligros conocidos (leer antes de tocar)
 
-1. **`.projects` es auto-flow con `nth-child`**: los fondos de las tarjetas y los datos
-   del slider se identificaban por posición DOM. Refactorizado a clases/`data-project`
-   en la Fase 1: mantener esa convención (una tarjeta = clase de fondo + `data-project`
-   que apunta al array de `js/slider-project.js`).
+1. **`.projects`**: los fondos de las tarjetas van por clase (`.project-personal`,
+   `.project-empresas`, …) y los datos del slider por `data-project` que apunta al
+   array de `js/slider-project.js`. El `:nth-child` SOLO se usa para alternar la
+   posición (impar = izquierda, par = derecha); no atar fondos ni datos a la
+   posición DOM. No existen círculos `.technologies` (eliminados en la Fase 1,
+   con ellos `js/responsive.js`).
 2. `.popup-about-me-overlay` (scss) ≠ `.popup-aboutme-overlay` (HTML): regla muerta,
    no "arreglar" renombrando sin revisar `.active`.
-3. `responsive.js` oculta `.technologies` con `<=1024px` en JS (además del CSS).
+3. `.study-centers` usa `grid-template-rows: repeat(3, auto)` hardcodeado: si se
+   añade un cuarto bloque de cursos hay que pasarlo a `auto`.
 4. El hover de 3 puntos de `.course` usa `<h3>...</h3>` invisible
    (`sass/main-content.scss`, `color: rgba(255,255,255,0)` → `1` en `:hover`).
 5. `libs/bootstrap-5.0.2/` es vendor copiado; no editar.

@@ -1,15 +1,11 @@
 let projectImgs = [
-    {0: "./img/EquipoEmpresarial.jpg",1: "./img/CasaModerna2.jpg",2: "./img/CasaModerna.jpg",3:"./img/WhiteGeometry.png"},
-    {0: "./img/EquipoEmpresarial.jpg",1: "./img/CasaModerna2.jpg",2: "./img/CasaModerna.jpg"},
-    {0: "./img/EquipoEmpresarial.jpg"},
+    {0: "./img/WhiteGeometry.png",1: "./img/LogoMantiWhiteBackBlack.png"},
     {0: "./img/EquipoEmpresarial.jpg",1: "./img/CasaModerna2.jpg"}
 ];
 
 let project = [
-    {img: projectImgs[0], title: "Web Inmobiliaria Frontend", description: "Descripción del proyecto 1"},
-    {img: projectImgs[1], title: "Web Inmobiliaria Backend", description: "Descripción del proyecto 2"},
-    {img: projectImgs[2], title: "Web Personal", description: "Descripción del proyecto 3"},
-    {img: projectImgs[3], title: "Proyectos para empresas", description: "Descripción del proyecto 4"}
+    {img: projectImgs[0], title: "Web Personal", description: "Descripción del proyecto 1"},
+    {img: projectImgs[1], title: "Proyectos para empresas", description: "Descripción del proyecto 2"}
 ];
 
 let indexImg = 0;
@@ -21,7 +17,7 @@ var countImgs;
 $(".project").on("click", function () {
 
     $(".slidershow-project").addClass("active");
-    indexProject = $(".project").index(this);
+    indexProject = parseInt($(this).attr("data-project"), 10);
 
     /* Count the images of project */
     countImgs = countImgsProject();
