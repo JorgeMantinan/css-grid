@@ -80,6 +80,10 @@ $(".project").on("click", function () {
     $(".slidershow-project").addClass("active");
     indexProject = parseInt($(this).attr("data-project"), 10);
 
+    /* The project info is always open by default when entering */
+    $(".project-info").removeClass("hide");
+    $(".arrow-up-down").removeClass("rotate180");
+
     /* Count the images of project */
     countImgs = countImgsProject();
 
