@@ -76,6 +76,18 @@ body{
   transition: 1s;
 }
 
+/* Back to top button (same look as .but-info, hidden until you scroll) */
+#go-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 90;
+  display: none;
+  padding: 0.6rem 0.75rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
 /* Scroll Bar */
 ::-webkit-scrollbar
 {
