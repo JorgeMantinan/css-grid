@@ -66,8 +66,10 @@ Breakpoints (siempre `max-width`): 1200 / 1024 / 768 (menú hamburguesa) / 600.
    `.project-empresas`, …) y los datos del slider por `data-project` que apunta al
    array de `js/slider-project.js`. El `:nth-child` SOLO se usa para alternar la
    posición (impar = izquierda, par = derecha); no atar fondos ni datos a la
-   posición DOM. No existen círculos `.technologies` (eliminados en la Fase 1,
-   con ellos `js/responsive.js`).
+   posición DOM. El orden de los hijos importa para el zig-zag proyecto/círculo:
+   `P,T | T,P | P,T | T,P …` (los círculos `.technologies` vuelven a acompañar a
+   cada tarjeta; se ocultan con CSS en ≤1024 porque no hay hover y ahí se muestra
+   la lista `ul.project-tech` de la propia tarjeta).
 2. `.popup-about-me-overlay` (scss) ≠ `.popup-aboutme-overlay` (HTML): regla muerta,
    no "arreglar" renombrando sin revisar `.active`.
 3. **Popups**: hay tres y todos usan el mismo patrón (clase `.active` con jQuery):

@@ -218,6 +218,7 @@ ul.show {
   width: 60vw;
   height: 410px;
   z-index: 3;
+  position: relative;
   cursor: pointer;
 }
 .project:nth-child(odd) {
@@ -283,7 +284,7 @@ ul.show {
   line-height: 1.125;
 }
 .project .project-content ul.project-tech {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   margin: 0 0 15px 0;
   padding: 0;
@@ -302,6 +303,51 @@ ul.show {
 }
 .project .project-content ul.project-tech li:last-child::after {
   content: "";
+}
+
+/* Tecnologies circle that accompanies each project (hover reveals the list) */
+.technologies {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  clip-path: circle(50% at 50% 50%);
+  grid-column: span 1;
+  z-index: 5;
+  transition: 1.2s;
+}
+.technologies:before {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-image: url("../img/CodigoProgramacion.jpg");
+  background-size: cover;
+  filter: brightness(70%);
+  z-index: -1;
+  transition: 1.2s;
+}
+.technologies:hover, .technologies:focus {
+  clip-path: circle(70% at 50% 50%);
+  transition: 1.2s;
+}
+.technologies:hover ul, .technologies:focus ul {
+  display: block;
+}
+.technologies:hover:before, .technologies:focus:before {
+  filter: brightness(30%);
+  transition: 1.2s;
+}
+.technologies ul {
+  display: none;
+  font-size: calc(6px + 1.2vh);
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
 }
 
 /* Courses */
@@ -476,18 +522,28 @@ ul.show {
   .project {
     margin-right: 0px;
     width: 80%;
-    height: 210px;
+    height: auto;
+    min-height: 210px;
     grid-column: span 1;
   }
   .project:nth-child(odd), .project:nth-child(even) {
     grid-column: span 1;
   }
   .project:before {
-    width: 80%;
-    height: 210px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
   }
   .project .project-content {
     padding: 20px 20px;
+  }
+  /* No hover on touch screens: the circle is useless, the card list shows instead */
+  .technologies {
+    display: none;
+  }
+  .project .project-content ul.project-tech {
+    display: flex;
   }
 }
 /* Ipad Screen */
